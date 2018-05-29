@@ -1,6 +1,7 @@
 import {
     FETCHING_DATA,
-    FETCHING_DATA_SUCCESS
+    FETCHING_DATA_SUCCESS,
+    FETCHING_DATA_ERROR
 } from './../utils/actionTypes';
 import { urlCryptoList } from './../utils/consts';
 import axios from 'axios';
@@ -12,6 +13,9 @@ export default function FetchData() {
         return axios.get(urlCryptoList)
             .then( res => {
                 dispatch({ type: FETCHING_DATA_SUCCESS, payload: res.Data})
+            })
+            .catch( err => {
+                console.log(err);
             })
     }
 }
