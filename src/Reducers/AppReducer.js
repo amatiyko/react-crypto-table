@@ -4,11 +4,11 @@ import {
 } from './../utils/actionTypes';
 
 const initialState = {
-    isFetching: true, 
+    isFetching: false, 
     data: {}
 }
 
-export default function(state = initialState, action) {
+export default function AppReducer(state = initialState, action) {
     switch(action.type) {
         case FETCHING_DATA: 
             return Object.assign({}, state, {
