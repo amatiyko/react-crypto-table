@@ -12,7 +12,8 @@ export default function FetchData() {
 
         return axios.get(urlCryptoList)
             .then( res => {
-                dispatch({ type: FETCHING_DATA_SUCCESS, payload: res.Data})
+                console.log('fetch result', res)
+                dispatch({ type: FETCHING_DATA_SUCCESS, payload: res.data.Data})
             })
             .catch( err => {
                 console.log(err);

@@ -1,1 +1,1 @@
-export const urlCryptoList = 'https://min-api.cryptocompare.com/data/';
+export const urlCryptoList = 'https://min-api.cryptocompare.com/data/all/coinlist';
