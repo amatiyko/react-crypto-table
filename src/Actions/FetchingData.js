@@ -1,7 +1,6 @@
 import {
     FETCHING_DATA,
     FETCHING_DATA_SUCCESS,
-    FETCHING_DATA_ERROR
 } from './../utils/actionTypes';
 import { urlCryptoList } from './../utils/consts';
 import axios from 'axios';

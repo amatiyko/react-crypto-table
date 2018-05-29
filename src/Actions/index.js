@@ -1,3 +1,5 @@
 import FetchingData from './FetchingData';
+import FetchingPrice from './FethingPrice';
+import { ShowMore } from './SimpleActions'
 
-export { FetchingData };
+export { FetchingData, FetchingPrice, ShowMore };
