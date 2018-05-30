@@ -16,7 +16,7 @@ export default class TableRow extends Component{
         }
     }
     componentDidMount(){
-        axios.get(`${urlPrice}?fsym=${this.props.data.Symbol}&tsyms=BTC,USD,EUR`)
+        axios.get(`${urlPrice}?fsym=${this.props.data.Symbol}&tsyms=${BTC},${USD},${EUR}`)
             .then((res)=> {
                 if (res.Response && res.Response==='Error'){
                     this.setState({price: 'no data'})
@@ -46,17 +46,17 @@ export default class TableRow extends Component{
                 </div>
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '170px'}}>
                     <span style={{color: '#42385C',fontWeight: 700,fontSize: '13px'}}>
-                        { price && price.BTC || 'no info' }
+                        { price ? price.BTC : 'no info' }
                     </span>
                 </div>
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '170px'}}>
                     <span style={{color: '#42385C',fontWeight: 700,fontSize: '13px'}}>
-                        {price && price.USD || 'no info'}
+                        {price ? price.USD : 'no info'}
                     </span>
                 </div>
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '170px'}}>
                     <span style={{color: '#42385C',fontWeight: 700,fontSize: '13px'}}>
-                        {price && price.EUR || 'no info'}
+                        {price ? price.EUR : 'no info'}
                     </span>
                 </div>
             </div>

@@ -22,10 +22,9 @@ class CoinTable extends Component{
             );
         }
         let coins2show = Object.keys( store.data ).map( x=>store.data[x] ).slice( 0, store.displayCount );
-        let coinsSymbols = coins2show.map( x => x.Symbol).join();
         return(
             <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', paddingTop: '50px', paddingBottom: '50px', backgroundColor: '#ECECEB'}}>
-                <div style={{width: '90%', maxWidth:'1170px', backgroundColor: 'white', boxShadow: '0px 0px 20px -1px rgba(0,0,0,0.75)'}}>
+                <div style={{width: '90%', maxWidth:'930px', backgroundColor: 'white', boxShadow: '0px 0px 20px -1px rgba(0,0,0,0.75)'}}>
                     <div style={{display: 'flex', height:  '50px', borderBottom: '1px solid rgba(128, 128, 128,.3)', margin: '0 5px'}}>
                         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '50px'}}>
                             <span style={{color: '#202020',fontWeight: 700,fontSize: '13px'}}>
