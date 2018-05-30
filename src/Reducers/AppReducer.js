@@ -1,8 +1,6 @@
 import {
     FETCHING_DATA,
     FETCHING_DATA_SUCCESS,
-    FETHING_PRICE,
-    FETCHING_PRICE_SUCCESS,
     SHOW_MORE,
     FETCHING_DATA_ERROR
 } from './../utils/actionTypes';
@@ -34,15 +32,6 @@ export default function AppReducer(state = initialState, action) {
                 error: true
             })
         }
-        case FETHING_PRICE: 
-            return Object.assign({}, state, {
-                isFetching: true
-            })
-        case FETCHING_PRICE_SUCCESS: 
-            return Object.assign({}, state, {
-                isFetching: false,
-                price: action.payload
-            })
         case SHOW_MORE:
             return Object.assign({}, state, {
                 displayCount: state.displayCount + displayStep

@@ -1,7 +1,7 @@
 //urls
 export const urlCryptoList = 'https://min-api.cryptocompare.com/data/all/coinlist';
 export const mainUrl = 'https://www.cryptocompare.com';
-export const urlPriceMulti = 'https://min-api.cryptocompare.com/data/pricemulti'
+export const urlPrice = 'https://min-api.cryptocompare.com/data/price'
 
 //money symbols
 export const BTC = 'BTC';
