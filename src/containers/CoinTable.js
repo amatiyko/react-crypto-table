@@ -32,7 +32,9 @@ class CoinTable extends Component{
                             </span>
                         </div> 
                         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '170px'}}>
-                            Logo
+                        <span style={{color: '#42385C',fontWeight: 700,fontSize: '13px'}}>
+                                Logo
+                            </span>
                         </div>
                         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '170px'}}>
                             <span style={{color: '#42385C',fontWeight: 700,fontSize: '13px'}}>
