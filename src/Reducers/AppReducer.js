@@ -3,7 +3,8 @@ import {
     FETCHING_DATA_SUCCESS,
     FETHING_PRICE,
     FETCHING_PRICE_SUCCESS,
-    SHOW_MORE
+    SHOW_MORE,
+    FETCHING_DATA_ERROR
 } from './../utils/actionTypes';
 import { displayStep } from './../utils/consts'
 
@@ -11,7 +12,8 @@ const initialState = {
     isFetching: false,
     price: {},
     displayCount: 20,
-    data: {}
+    data: {},
+    error: false,
 }
 
 export default function AppReducer(state = initialState, action) {
@@ -24,6 +26,12 @@ export default function AppReducer(state = initialState, action) {
             return Object.assign({}, state, {
                 isFetching: false,
                 data: action.payload
+            })
+        }
+        case FETCHING_DATA_ERROR: {
+            return Object.assign({}, state, {
+                isFetching: false,
+                error: true
             })
         }
         case FETHING_PRICE: 
